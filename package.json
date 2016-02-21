@@ -1,0 +1,19 @@
+{
+  "name": "brewtemp",
+  "version": "1.0.0",
+  "description": "endpoint for temperature collection and webserver",
+  "main": "index.js",
+  "directories": {
+    "test": "test"
+  },
+  "scripts": {
+    "test": "mocha"
+  },
+  "author": "Aaron Munger",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.13.4",
+    "redis": "^2.4.2",
+    "socket.io": "^1.4.5"
+  }
+}
