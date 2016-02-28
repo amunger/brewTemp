@@ -9,6 +9,7 @@ const char WiFiSSID[] = "laserChloe";
 const char WiFiPSK[] = "princessface";
 
 const char http_site[] = "brewtemp.herokuapp.com";
+const int pub_port = 80;
 
 /////////////////////
 // Pin Definitions //
@@ -71,7 +72,7 @@ int postTemp()
   digitalWrite(LED_PIN, HIGH);
 
   WiFiClient client;
-  if (!client.connect(http_site, 3000)) 
+  if (!client.connect(http_site, pub_port)) 
   {
     // If we fail to connect, return 0.
     return 0;

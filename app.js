@@ -27,8 +27,9 @@ io.sockets.on('connection', function(socket){
 });
 
 app.get('/temp/:temp', function(req, res){
-	console.log('temp received');
-	var reading = {time: Date.now(), temp: req.params.temp};
+	var timestamp = Date.now();
+	console.log(req.params.temp + ' temp received at ' + timestamp);
+    var reading = {time: timestamp, temp: req.params.temp};
 	readings.push(reading);
 	io.sockets.emit('reading', reading);
 	res.send('ok')
