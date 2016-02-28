@@ -11,8 +11,8 @@ $(function (){
 	});
 	
 	function myYRangeFunction(range) {
-		var min = 50;
-		var max = 215;
+		var min = 0;
+		var max = 1024;
 		return {min: min, max: max};
 	};
 	

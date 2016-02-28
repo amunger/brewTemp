@@ -8,7 +8,7 @@
 const char WiFiSSID[] = "laserChloe";
 const char WiFiPSK[] = "princessface";
 
-const char http_site[] = "52.33.86.126";
+const char http_site[] = "brewtemp.herokuapp.com";
 
 /////////////////////
 // Pin Definitions //
