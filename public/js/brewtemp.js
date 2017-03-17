@@ -3,29 +3,28 @@
 $(function (){
 	var socket = io.connect();
 	var series = new TimeSeries();
-	
+
 	socket.on('reading', function (reading){
 		var temp = $('<li>' + reading.temp + '</li>');
-		$('.temp-list').append(temp);
+		$('.temp-list').prepend(temp);
 		series.append(reading.time, reading.temp);
 	});
-	
+
 	function myYRangeFunction(range) {
 		var min = 0;
 		var max = 1024;
 		return {min: min, max: max};
 	};
-	
+
 	var chart = new SmoothieChart({millisPerPixel:100,
 		scaleSmoothing:0.115,
 		grid:{millisPerLine:6000,verticalSections:20},
 		//timestampFormatter:SmoothieChart.timeFormatter,
 		yRangeFunction:myYRangeFunction});
-		
+
     var canvas = document.getElementById('smoothie-chart');
-    
+
 
 	chart.addTimeSeries(series, {lineWidth:2,strokeStyle:'#00ff00'});
 	chart.streamTo(canvas, 1415);
 });
-
