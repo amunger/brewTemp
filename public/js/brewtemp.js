@@ -5,8 +5,8 @@ $(function (){
 	var series = new TimeSeries();
 
 	socket.on('reading', function (reading){
-		var temp = $('<li>' + reading.temp + '</li>');
-		$('.temp-list').prepend(temp);
+
+		$('#current-reading').html(reading.temp);
 		series.append(reading.time, reading.temp);
 	});
 
