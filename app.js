@@ -11,7 +11,7 @@ server.listen(port, function(){
 	console.log('Server listening on port %d', port);
 });
 
-app.use(express.static('public'));
+app.use(express.static(__dirname + '/public'));
 
 app.get('/', function(req, res){
 	res.sendfile('public/index.html');
@@ -34,5 +34,3 @@ app.get('/temp/:temp', function(req, res){
 	io.sockets.emit('reading', reading);
 	res.send('ok')
 });
-	
-
