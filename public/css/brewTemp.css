@@ -1,0 +1,13 @@
+.temp-label{
+  font-size: 25px;
+}
+
+#current-reading{
+  font-size: 20px;
+  color: #f2691f;
+  font-weight: bold;
+}
+
+.temp-display{
+  padding-bottom: 12px;
+}

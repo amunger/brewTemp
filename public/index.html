@@ -4,12 +4,15 @@
 		<title>brew temps</title>
 	</head>
 	<body>
-		<canvas id="smoothie-chart" width="564" height="253" ></canvas>
-		<h3>Current Reading:</h3>
-		<div id='current-reading'></div>
+		<div class='temp-display'>
+			<span class=temp-label>Current Temperature:</span>
+			<span id='current-reading'></span>
+		</div>
+		<canvas id="smoothie-chart" width="750" height="350" ></canvas>
 		<script src="/js/lib/jquery.js"></script>
 		<script src="/js/lib/smoothie.js"></script>
 		<script src="/socket.io/socket.io.js"></script>
 		<script src="/js/brewtemp.js"></script>
+		<link rel="stylesheet" href="css/brewtemp.css">
 	</body>
 </html>
